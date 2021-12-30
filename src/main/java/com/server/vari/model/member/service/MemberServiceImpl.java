@@ -15,7 +15,7 @@ public class MemberServiceImpl implements MemberService {
     private final PasswordEncoder passwordEncoder;
 
     @Override
-    public Long singUp(MemberDto memberDto) {
+    public Long signup(MemberDto memberDto) {
         memberDto.setPassword(passwordEncoder.encode(memberDto.getPassword()));
         Member member = memberDto.toEntity();
         memberRepository.save(member);

@@ -25,7 +25,7 @@ public class MemberController {
     @PostMapping("/signup")
     @ApiOperation(value="회원가입")
     public CommonResult signup(@Valid @RequestBody MemberDto memberDto){
-        memberService.singUp(memberDto);
+        memberService.signup(memberDto);
         return responseService.getSuccessResult();
     }
 
