@@ -1,7 +1,7 @@
 spring:
   ### DB 설정 ###
   datasource:
-    url: jdbc:h2:tcp://localhost/~/vari
+    url: jdbc:h2:mem:vari
     driver-class-name: org.h2.Driver
     username: sa
 
@@ -23,3 +23,8 @@ spring:
         hbm2ddl:
           auto: create
     show-sql: true
+
+security:
+  jwt:
+    token:
+      secretKey: 4oCYc3ByaW5nLWJvb3QtdmFyaS1qd3TigJkK
