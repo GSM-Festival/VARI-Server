@@ -3,10 +3,16 @@ package com.server.vari.model.board.dto;
 import com.server.vari.model.board.Board;
 import com.server.vari.model.board.enumType.BoardType;
 import com.server.vari.model.member.Member;
+import lombok.*;
 
 import javax.validation.constraints.NotBlank;
 
-public class BoardDto {
+@Getter
+@AllArgsConstructor
+@Setter
+@NoArgsConstructor(access = AccessLevel.PROTECTED)
+@Builder
+public class BoardPortfolioDto {
 
     @NotBlank
     private String title;
