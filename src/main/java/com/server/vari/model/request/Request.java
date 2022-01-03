@@ -25,7 +25,7 @@ public class Request {
     @JoinColumn(name = "board_id")
     private Board board;
 
-    @Column(name = "request_stdNum", nullable = false)
+    @Column(name = "request_std_num", nullable = false)
     private String stdNum;
 
     @Column(name = "request_language", nullable = false)

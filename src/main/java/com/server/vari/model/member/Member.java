@@ -37,7 +37,7 @@ public class Member implements UserDetails {
     @Column(name = "member_password", nullable = false)
     private String password;
 
-    @Column(name = "member_refreshToken")
+    @Column(name = "member_refresh_token")
     private String refreshToken;
 
     @ElementCollection(fetch = FetchType.EAGER)
