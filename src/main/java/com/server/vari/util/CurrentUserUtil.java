@@ -14,7 +14,6 @@ public class CurrentUserUtil {
     private final MemberRepository memberRepository;
 
     public Member getCurrentUser() {
-
         String username = null;
         Object principal = SecurityContextHolder.getContext().getAuthentication().getPrincipal();
         if(principal instanceof UserDetails) {
