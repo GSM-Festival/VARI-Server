@@ -1,5 +1,7 @@
 package com.server.vari.model.board;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.server.vari.model.board.enumType.BoardType;
 import com.server.vari.model.member.Member;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,6 +24,7 @@ public class Board {
 
     @ManyToOne(fetch = LAZY)
     @JoinColumn(name = "member_id")
+    @JsonIgnore
     private Member member;
 
     @Column(name = "board_title", nullable = false)
@@ -29,4 +32,8 @@ public class Board {
 
     @Column(name = "board_content", nullable = false)
     private String content;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name = "board_type", nullable = false)
+    private BoardType boardType;
 }
