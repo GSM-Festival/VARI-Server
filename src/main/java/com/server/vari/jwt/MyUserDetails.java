@@ -15,7 +15,6 @@ public class MyUserDetails implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        return memberRepository.findByName(username) // String 타입의 member primary key를 long타입으로 변환
-                .orElseThrow( () -> new UsernameNotFoundException("해당 사용자를 찾을 수 없습니다."));
+        return memberRepository.findByName(username); // String 타입의 member primary key를 long타입으로 변환
     }
 }
